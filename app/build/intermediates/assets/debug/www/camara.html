@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Capture</title>
+    <link rel="stylesheet" href="jquery-mobile-1.4.0/themes/electric-blue.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-1.4.0/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="jquery-mobile-1.4.0/jquery-1.10.2.min.js"></script> 
+    <script src="jquery-mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script> 
+
+    <script type="text/javascript" charset="utf-8">
+
+    </script>
+  </head>
+  <body>
+    <button onclick="capturePhoto();">Capture Photo</button> <br>
+    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <img style="display:none;" id="largeImage" src="" />
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Test xmlns="http://www.w3schools.com">
+	<Title>Inventario Neuropsiquiátrico de Cummings</Title>
+	<ShortTitle>INC</ShortTitle>
+	<Description>
+		El Inventario Neuropsiquiátrico (NPI) es una escala que valora la presencia de alteraciones psicopatológicas en pacientes con enfermedades neurológicas, principalmente demencias.
+		%br%
+		La prueba consiste en valorar la frecuencia y la gravedad de diez trastornos neuropsiquiátricos. El valor para un trastorno será el resultado de multiplicar su frecuencia por su gravedad según las escalas que proporciona el test. 
+</Description>
+	<Result type="integer" combination="sum" />
+	<Origin>app</Origin>
+	<Section>
+	    <Title>Trastornos neuropsiquiátricos</Title>
+	    <Description>Descripcion de la sección.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+		        <Display>
+		            <Title>Delirios</Title>
+		            <Instructions>
+		            	Ausente: No se presenta. 
+		            	Ocasionalmente: Menos de una vez por semana. 
+		            	A menudo: Alrededor de una vez por semana. 
+		            	Frecuentemente: Varias veces por semana, pero no a diario. 
+		            	Muy frecuentemente: A diario.
+		            </Instructions>
+		        </Display>
+		     	<Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Alucinaciones</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Agitación</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Depresión/disforia</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Ansiedad</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Euoria/júbilo</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Apatía/indiferencia</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Desinhibición</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Irritabilidad/labilidad</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Conducta motora sin finalidad</Title>
+		        </Display>
+		        <Result type="integer" combination="multiplication" />
+		        <Answers>
+		        	<Answer type="option" label="Frecuencia">
+		            	<Option value="0">Ausente</Option>
+			            <Option value="1">Ocasionalmente</Option>
+			            <Option value="2">A menudo</Option>
+			            <Option value="3">Frecuentemente</Option>
+			            <Option value="4">Muy frecuentemente</Option>
+		        	</Answer>
+		        	<Answer type="option" label="Gravedad">
+		        	    <Option value="1">Leve</Option>
+			            <Option value="2">Moderada</Option>
+			            <Option value="3">Grave</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		</Questions>
+	</Section>
+</Test>

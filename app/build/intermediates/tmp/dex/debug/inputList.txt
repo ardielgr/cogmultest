@@ -1,0 +1,2 @@
+C:\Users\Aegis\PsicoTestOK\app\build\intermediates\classes\debug
+C:\Users\Aegis\PsicoTestOK\app\build\intermediates\pre-dexed\debug\cordova-2.9.0-360f8103c89025ec14fa8d7bf243561d0f196d3d.jar

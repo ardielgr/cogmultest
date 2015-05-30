@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Test xmlns="http://www.w3schools.com">
+	<Title>Test de Alteración de la Memoria</Title>
+	<ShortTitle>T@M</ShortTitle>
+	<Description>
+		El Test de Alteración de Memoria (T@M) es un test cognitivo de cribado, con un alto valor discriminatorio para el deterioro cognitivo leve de tipo amnésico y para la enfermedad de Alzheimer leve, entre la población general.
+		%br%
+		Es un test breve, y fácil de administrar y puntuar. Es un test de cribado completo que evalúa varios subtipos de memoria, y que está basado en la teoría de la consolidación de la memoria, que dice que la memoria episódica requiere del lóbulo temporal medio para su consolidación, alojándose después en los circuitos neocorticales como parte del sistema de memoria semántica.
+
+	</Description>
+	<Result type="integer" combination="sum" />
+	<Origin>app</Origin>
+	<Section>
+	    <Title>Memoria Inmediata</Title>
+	    <Description>Descripcion de la sección.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question type="not-evaluate">
+		        <Display>
+		            <Title>Repita: cereza (R), hacha(R), elefante(R), piano(R), verde(R)</Title>
+		            <Instructions>Pídale que intente memorizar estas palabras y que esté atento/a.</Instructions>
+		        </Display>
+		    </Question>
+		    <Question>
+		        <Display>
+		        	<Title>Le he dicho una fruta, ¿cuál era?</Title>
+		        	<Instructions>Si falla, repítala.</Instructions>
+		        </Display>
+		        <Answers>
+		        	<Answer type="option">
+		            	<Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		        	<Title>Le he dicho una herramienta, ¿cuál era?</Title>
+		    		<Instructions>Si falla, repítala.</Instructions>
+		    	</Display>
+		    	<Answers>
+		    		<Answer type="option">
+		            	<Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+		        	</Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Le he dicho un animal, ¿cuál?</Title>
+		    		<Instructions>Si falla, repítala.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Le he dicho un instrumento musical, ¿cuál?</Title>
+		    		<Instructions>Si falla, repítala.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Le he dicho un color, ¿cuál?</Title>
+		    		<Instructions>Si falla, repítala.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question type="not-evaluate">
+		        <Display>
+		            <Title>Después le pediré que recuerde estas palabras</Title>
+		            <Instructions></Instructions>
+		        </Display>
+		    </Question>
+		    <Question type="not-evaluate">
+		        <Display>
+		            <Title>Repita: Treinta gatos grises se comieron todos los quesos (R)</Title>
+		            <Instructions>Pídale que esté atento a esta frase e intente memorizarla. Máximo 2 intentos para repetición.</Instructions>
+		        </Display>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>¿Cuántos gatos había?</Title>
+		    		<Instructions>Si falla, decirle la respuesta correcta.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>¿De qué color eran?</Title>
+		    		<Instructions>Si falla, decirle la respuesta correcta.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>¿Qué se comieron?</Title>
+		    		<Instructions>Si falla, decirle la respuesta correcta.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question type="not-evaluate">
+		        <Display>
+		            <Title>Repita: Un niño llamado Luis jugaba con su bicicleta (R)</Title>
+		            <Instructions>Pídale que esté atento a esta frase e intente memorizarla. Máximo 2 intentos para repetición.</Instructions>
+		        </Display>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>¿Cómo se llamaba el niño?</Title>
+		    		<Instructions>Si falla, decirle la respuesta correcta.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>¿Con qué jugaba?</Title>
+		    		<Instructions>Si falla, decirle la respuesta correcta.</Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Memoria de orientación temporal</Title>
+	    <Description>No son válidas las aproximaciones. Sólo en el caso del año se puede permitir las dos últimas cifras.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+	        <Question>
+		        <Display>
+		            <Title>Día de la semana</Title>
+		    		<Instructions></Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Mes</Title>
+		    		<Instructions></Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Día del mes</Title>
+		    		<Instructions></Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Año</Title>
+		    		<Instructions></Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		    <Question>
+		        <Display>
+		            <Title>Estación</Title>
+		    		<Instructions></Instructions>
+		    	</Display>
+		    	<Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+		    </Question>
+		</Questions>
+	</Section>
+	<Section>
+	    <Title>Memoria remota semántica</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuál es su fecha de nacimiento?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cómo se llama el profesional que arregla coches?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cómo se llamaba el anterior presidente del gobierno?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuál es el último día del año?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuántos días tiene un año que no sea bisiesto?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuántos gramos hay en un cuerto de kilo?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuál es el octavo mes del año?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Qué día se celebra la Navidad?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Si el reloj marca las 11 en punto, ¿en qué número se sitúa la aguja larga?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Qué estación del año empieza en septiembre después del verano?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Qué animal bíblico engañó a Eva con una manzana?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿De qué fruta se obtiene el mosto?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿A partir de qué fruto se obtiene el chocolate?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuánto es el triple de 1?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuántas horas hay en dos días?</Title>
+	                <Instructions>Dos intentos. Si falla, repita de nuevo la pregunta.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Memoria de evocación libre</Title>
+	    <Description></Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+	        <Question time-limit="20">
+	            <Display>
+	                <Title>De las palabras que dije al principio, ¿cuáles podría recordad?</Title>
+	                <Instructions>Esperar por las respuesta mínimo 20 segundos.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Cereza</Option>
+		                <Option value="1">Hacha</Option>
+		                <Option value="1">Elefante</Option>
+		                <Option value="1">Piano</Option>
+		                <Option value="1">Verde</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Se acuerda de la frase de los gatos?</Title>
+	                <Instructions>Marcar las ideas que recuerda</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">30</Option>
+		                <Option value="1">Grises</Option>
+		                <Option value="1">Quesos</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Se acuerda de la frase del niño?</Title>
+	                <Instructions>Marcar las ideas que recuerda</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Luis</Option>
+		                <Option value="1">Bicicleta</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Memoria remota semántica</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+	        <Question>
+	            <Display>
+	                <Title>Le dije una fruta, ¿cuál era?</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Le dije una herramienta, ¿cuál era?</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Led ije un animal, ¿cuál era?</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Le dije un instrumento musical, ¿cuál era?</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Le dije un color, ¿cuál era?</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question type="not-evaluate">
+		        <Display>
+		            <Title>Recuerde la frase de los gatos</Title>
+		        </Display>
+		    </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cuantos gatos había? (30)</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿De qué color eran? (gris)</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Qué comían? (queso)</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	         <Question type="not-evaluate">
+		        <Display>
+		            <Title>Recuerde la frase del niño</Title>
+		        </Display>
+		    </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Cómo se llamaba? (Luis)</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>¿Con qué estaba jugando? (Bicicleta)</Title>
+	                <Instructions>Sólo pregunte por las ideas que no haya evocado de forma libre. %br%Marque como correctas aquellas que si haya evocado.</Instructions>
+	            </Display>
+	            <Answers>
+			    	<Answer type="option">
+			            <Option value="1">Bien</Option>
+			            <Option value="0">Mal</Option>
+			        </Answer>
+		        </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+</Test>

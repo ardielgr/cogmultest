@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Aegis\PsicoTestOK\app\libs\cordova-2.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c00db30c9cdad3676aeefd78e37b716364b5259">
+        <dex dex="C:\Users\Aegis\PsicoTestOK\app\build\intermediates\pre-dexed\debug\cordova-2.9.0-360f8103c89025ec14fa8d7bf243561d0f196d3d.jar" />
+    </item>
+
+</items>

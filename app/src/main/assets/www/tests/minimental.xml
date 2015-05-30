@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Test xmlns="http://www.w3schools.com">
+	<Title>MiniMental</Title>
+	<ShortTitle>MM</ShortTitle>
+	<Description>
+		El test Mini-Mental State Examination (MMSE) o Mini Prueba del Estado Mental es un método muy utilizado para detectar el deterioro cognitivo y vigilar su evolución en pacientes con alteraciones neurológicas, especialmente en ancianos. 
+		%br%
+		Consiste en 10 preguntas y es necesario utilizar lápiz y papel para algunas de ellas.
+	</Description>
+	<Result type="integer" combination="sum" attachment-required="image" />
+	<Origin>app</Origin>
+	<Section>
+	    <Title>Orientación</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Orientación temporal</Title>
+	                <Instructions>Se puede considerar correcta la fecha con diferencia de dos días.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Día de la semana</Option>
+		                <Option value="1">Día del mes</Option>
+		                <Option value="1">Mes</Option>
+		                <Option value="1">Año</Option>
+		                <Option value="1">Estación del año</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	        <Question>
+	            <Display>
+	                <Title>Orientación espacial</Title>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Habitación</Option>
+		                <Option value="1">Edificio</Option>
+		                <Option value="1">Ciudad</Option>
+		                <Option value="1">Provincia</Option>
+		                <Option value="1">País</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Registro</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Escuche y repita: Casa (R), Zapato (R), Papel (R)</Title>
+	                <Instructions>Avísele que se le preguntará por ellas más tarde.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Casa</Option>
+		                <Option value="1">Zapato</Option>
+		                <Option value="1">Papel</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Atención y cálculo</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Reste 7 a 100. Continúe restando 7 a la nueva cantidad.</Title>
+	                <Instructions>En cada repetición restar 7 a cada cantidad calculada. Repetir 5 veces.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">93</Option>
+		                <Option value="1">86</Option>
+		                <Option value="1">79</Option>
+		                <Option value="1">72</Option>
+		                <Option value="1">65</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Evocación</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Repita los objetos que nombramos hace un rato.</Title>
+	                <Instructions>No le ayude. Marque los objetos que haya nombrado correctamente.</Instructions>
+	            </Display>      
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Casa</Option>
+		                <Option value="1">Zapato</Option>
+		                <Option value="1">Papel</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Nominación</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Nombre estos objetos.</Title>
+	                <Instructions>Muestre al paciente un lápiz y un reloj. Marque los objetos que haya nombrado correctamente.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Lápiz</Option>
+		                <Option value="1">Reloj</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Repetición</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Repita: "Tres perros en un trigal"</Title>
+	            </Display>
+	            <Answers>
+		            <Answer type="option">
+		                <Option value="1">Bien</Option>
+		                <Option value="0">Mal</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Comprensión</Title>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Coja el papel con su mano derecha, dóblelo por la mitad y póngalo en el suelo</Title>
+	                <Instructions>Ofrezca al paciente un papel para que lleve a cabo las órdenes. Marque las órdenes que haya cumplido correctamente.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Coger papel</Option>
+		                <Option value="1">Doblarlo</Option>
+		                <Option value="1">Ponerlo en el suelo</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Lectura</Title>
+	    <Description></Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Lea: "CIERRE LOS OJOS" y hágalo.</Title>
+	                <Instructions>Muestre al paciente la orden y dígale que la lleve a cabo. No debe leerla y sólo debe explicarlo una vez.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="option">
+		                <Option value="1">Bien</Option>
+		                <Option value="0">Mal</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Escritura</Title>
+	    <Description></Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display>
+	                <Title>Escriba una oración</Title>
+	                <Instructions>Ofrézcale el material necesario para hacerlo. La oración debe tener sujeto y predicado. Marque bien o mal en función de si la oración tiene sentido o no.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="option">
+		                <Option value="1">Bien</Option>
+		                <Option value="0">Mal</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Dibujo</Title>
+	    <Description></Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display media-required="image" image-src="tests/images/minimental.jpg">
+	                <Title>Copie este dibujo</Title>
+	                <Instructions>Ofrézcale el material necesario para realizar el dibujo. La respuesta se considera correcta si tiene dos figuras de 5 lados y la figura formada por el cruce tiene 4 lados.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="option">
+		                <Option value="1">Bien</Option>
+		                <Option value="0">Mal</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+</Test>

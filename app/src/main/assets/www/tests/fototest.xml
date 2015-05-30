@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Test xmlns="http://www.w3schools.com">
+	<Title>FotoTest</Title>
+	<ShortTitle>FT</ShortTitle>
+	<Description>
+		El Fototest es un test cognitivo breve que evalúa la capacidad de recordar seis elementos que 
+		previamente se le han mostrado al sujeto y se le ha pedido que nombre; entre denominación y recuerdo se 
+		inserta una tarea de fluidez verbal en la que el sujeto debe evocar nombres de personas agrupadas por sexo.
+		%br%
+		Al igual que otros test cognitivos breves, está especialmente indicado para la detección de sujetos con 
+		deterioro cognitivo y demencia, tanto en Atención Primaria como en consultas especializadas, pero también 
+		es un instrumento adecuado para el seguimiento de pacientes o la evaluación de la respuesta al tratamiento.
+	</Description>
+	<Origin>app</Origin>
+	<Result type="integer" combination="sum" />
+	<Section>
+	    <Title>Denominación</Title>
+	    <Description>Descripcion de la sección.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question>
+	            <Display media-required="image" image-src="tests/images/fototest.jpg">
+	                <Title>Enséñele la lámina con las fotos y pídale que nombre lo que aparece.</Title>
+	                <Instructions>En caso de error, indíquele el nombre correcto y no marque la casilla correspondiente.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox">
+		                <Option value="1">Cartas</Option>
+		                <Option value="1">Coche</Option>
+		                <Option value="1">Pera</Option>
+		                <Option value="1">Trompeta</Option>
+		                <Option value="1">Zapatos</Option>
+		                <Option value="1">Cuchara</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Fluidez Verbal</Title>
+	    <Description>Descripcion de la sección.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question time-limit="30">
+	            <Display>
+	                <Title>Quiero que me diga todos los nombres de hombres/mujeres que recuerde (sexo contrario)</Title>
+	                <Instructions>Empezar siempre por el sexo contrario. Conceda 30 segundo y empiece a contar en cuanto diga el primero nombre.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="integer" input-helper="counter"></Answer>
+	            </Answers>
+	        </Question>
+	        <Question time-limit="30">
+	            <Display>
+	                <Title>Quiero que me diga todos los nombres de hombres/mujeres que recuerde (mismo sexo)</Title>
+	                <Instructions>Empezar siempre por el sexo contrario. Conceda 30 segundo y empiece a contar en cuanto diga el primero nombre.</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="integer" input-helper="counter"></Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+	<Section>
+	    <Title>Recuerdo</Title>
+	    <Description>Descripcion de la sección.</Description>
+	    <Result type="integer" combination="sum" />
+	    <Questions>
+		    <Question time-limit="20">
+	            <Display>
+	                <Title>Recuerda qué fotos había en la lámina que le enseñé antes</Title>
+	                <Instructions>Libre: Marque las que recuerde sin ayuda. Máximo 20 segundos. %br%Facilitado: Una vez terminado el recuerdo libre, ofrecerle como pista la categoría de cada palabra que no haya recordado y marcar si lo recuerda. Ejemplo: "También había una fruta, ¿la recuerda?"</Instructions>
+	            </Display>
+	            <Answers>
+		            <Answer type="checkbox" label="Libre">
+		                <Option value="2">Cartas</Option>
+		                <Option value="2">Coche</Option>
+		                <Option value="2">Pera</Option>
+		                <Option value="2">Trompeta</Option>
+		                <Option value="2">Zapatos</Option>
+		                <Option value="2">Cuchara</Option>
+		            </Answer>
+		            <Answer type="checkbox" label="Facilitado">
+		                <Option value="1">Cartas</Option>
+		                <Option value="1">Coche</Option>
+		                <Option value="1">Pera</Option>
+		                <Option value="1">Trompeta</Option>
+		                <Option value="1">Zapatos</Option>
+		                <Option value="1">Cuchara</Option>
+		            </Answer>
+	            </Answers>
+	        </Question>
+	    </Questions>
+	</Section>
+</Test>

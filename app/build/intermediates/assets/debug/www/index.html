@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html, charset=utf-8">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="jquery-mobile-1.4.0/themes/electric-blue.min.css" />
+  	<link rel="stylesheet" href="jquery-mobile-1.4.0/themes/jquery.mobile.icons.min.css" />
+  	<link rel="stylesheet" href="jquery-mobile-1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+   </head>
+  <body>
+    <!-- Pagina principal -->
+    <div data-role="page" id="home">
+		  <div data-role="header">
+		    <h1>PsicoTest</h1>
+		  </div>
+      <div role="main" class="ui-content">
+        <a id="test-init-btn" href="#" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-bottom">Iniciar un test</a>
+        <a id="test-records-btn" href="#" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-bottom">Historial</a>
+        <div class='ui-grid-a'>
+          <div class='ui-block-a' style="padding-right:4px;"><a style="margin:0" id="test-manage-btn" href="#" class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-bottom">Tests</a></div>
+          <div class='ui-block-b' style="padding-left:4px;"><a style="margin:0" id="patients-manage-btn" href="#" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-bottom">Pacientes</a></div>
+        </div>
+        <div class="ui-corner-all custom-corners" style="display:none; margin-top: 8px;" id="unfinalized-tests">
+          <div class="ui-bar ui-bar-a">
+            <h3>Tests pendientes</h3>
+          </div>
+          <div class="ui-body ui-body-a" id="unfinalized-tests-content">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div data-role="page" id="test-pre-init">
+      <div data-role="header">
+        <h1>Iniciar un test</h1>
+      </div>
+      <div role="main" class="ui-content">
+
+          <span><strong>Identificador del paciente</strong></span>
+          <input name="pre-init-patient-id" id="pre-init-patient-id" value="" type="text">
+
+          <span><strong>Medico</strong></span>
+          <input name="pre-init-doctor-id" id="pre-init-doctor-id" value="" type="text">
+
+          <input name="pre-init-patient-id" id="pre-init-test-id" value="" type="hidden">
+          <div id="test-pre-init-patient-list-content"></div>
+          
+          <br />
+          <span><strong>Tipo de test</strong></span>
+          <input name='pre-init-test-name' id='pre-init-test-name' value='' type='text' disabled>
+          <div id="test-pre-init-test-list-content"></div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="arrow-l">Volver</a></li>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+            <li><a href="#" id="test-pre-init-submit-btn" data-icon="arrow-r">Continuar</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    
+
+    <!-- Pagina para la gestión de tests -->
+    <div data-role="page" id="post-parse-config-page">
+      <div data-role="header">
+        <h1>Configuración</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <h3>Configuración complementaria</h3>
+        <div id="post-parse-config-page-content"></div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a onclick='window.appController.processPostParseConfig();' href="#" data-icon="check">Listo</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <!-- Pagina para la gestión de tests -->
+    <div data-role="page" id="test-manage-main">
+      <div data-role="header">
+        <h1>Tests</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <div class="ui-corner-all custom-corners">
+          <div class="ui-bar ui-bar-a">
+            <h3>Tests disponibles</h3>
+          </div>
+          <div class="ui-body ui-body-a" id="test-manage-main-list">
+          </div>
+        </div>
+        <p>
+          <a id="test-manage-add-btn" href="#test-manage-add" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-right">Añadir nuevo</a>
+        </p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+     <!-- Pagina pagina para introducir ubicacion del fichero html -->
+    <div data-role="page" id="test-manage-add">
+      <div data-role="header">
+        <h1>Añadir Test</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <h4>Seleccione un origen</h4>
+        <div class='ui-grid-a'>
+          <div class='ui-block-a' style="padding-right:4px;"><a style="margin:0" id="test-manage-launch-local" href="#" class="ui-btn ui-corner-all ui-icon-arrow-u ui-btn-icon-left">Local</a></div>
+          <div class='ui-block-b' style="padding-left:4px;"><a style="margin:0" id="test-manage-launch-url" href="#test-manage-add-url" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-right">URL</a></div>
+        </div>
+        <br />
+        <div data-role="collapsible" data-mini="true">
+          <h4>Ayuda</h4>
+          <p><strong>Local:</strong> Cargue un fichero de configuración desde la memoria interna de su dispositivo.</p>
+          <p><strong>URL:</strong> Cargue un fichero de configuración desde una localización externa proporcionando una URL válida.</p>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <!-- Pagina pagina para introducir ubicacion del fichero html -->
+    <div data-role="page" id="test-manage-add-url">
+      <div data-role="header">
+        <h1>Añadir Test</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <label for="test-xml-location">URL del fichero de configuración</label>
+        <input name="test-xml-location" id="test-xml-location" value="" type="text">
+        <a id="test-manage-add-url-submit-btn" href="#" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-bottom">Descargar y añadir</a>
+        <br />
+        <div id="test-manage-add-url-loading" style="text-align: center; padding: 20px; display:none;">
+          <img src="img/loading.gif" />
+        </div>
+        <div data-role="collapsible" data-mini="true">
+          <h4>Ayuda</h4>
+          <p>Debe especificar una URL válida en la que se encuentre un fichero de confiuguración XML. Si la sintaxis del fichero no es correcta, el test no se podrá cargar.</p>
+          <p><strong>Es necesario que exista una conexión a internet activa durante la descarga.</strong></p>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" id="test-manage-add-local">
+      <div data-role="header">
+        <h1>Añadir Test</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <h4>Ficheros encontrados</h4>
+        <div class="ui-body ui-body-a" id='test-manage-add-local-list'>
+        </div>
+        <div data-role="collapsible" data-mini="true">
+          <h4>Ayuda</h4>
+          <p>Para importar desde su dispositivo, mueva los ficheros de configuración XML al directorio 'PsicoTest/import'. Si lo ha hecho correctamente su fichero XML aparecerá en la lista de arriba.</p>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" id="test-records">
+      <div data-role="header">
+        <h1>Historial</h1>
+      </div>
+      <div role="main" class="ui-content">
+      <div class="ui-corner-all custom-corners">
+        <div class="ui-body ui-body-a" id="test-records-content"></div>
+        <div class='ui-grid-b'>
+          <div class='ui-block-c' style="padding-top:8px; padding-right:4px;"><a style="margin:0" id="test-records-remove-btn" href="#" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-left">Vaciar</a></div>
+          <div class='ui-block-c' style="padding-top:8px; padding-left:4px;"><a style="margin:0" id="test-records-export-btn" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-right">Exportar</a></div>
+          <div class='ui-block-c' style="padding-top:8px; padding-left:4px;"><a style="margin:0" id="test-records-sync-btn" href="#" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-right">Sincronizar</a></div>
+        </div>
+      </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" id="patient-test-records">
+      <div data-role="header">
+        <h1>Historial</h1>
+      </div>
+      <div role="main" class="ui-content">
+      <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+          <h3 id="patient-test-records-title"></h3>
+        </div>
+        <div id="patient-test-records-content">
+        </div>
+      </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" id="patient-manage">
+      <div data-role="header">
+        <h1>Pacientes</h1>
+      </div>
+      <div role="main" class="ui-content">
+      <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+          <h3>Pacientes existentes</h3>
+        </div>
+        <div class="ui-body ui-body-a" id="patient-manage-content"></div>
+      </div>
+        <p>
+          <a id="patient-manage-add-btn" href="#patient-manage-add" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-right">Añadir nuevo</a>
+        </p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" onclick="window.appController.checkUnfinalizedInstances();" data-icon="home">Inicio</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" id="patient-manage-add">
+      <div data-role="header">
+        <h1>Añadir Paciente</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <label for="patient-manage-name">Identificación del paciente</label>
+        <input name="patient-manage-name" id="patient-manage-name" value="" type="text">
+        <a id="patient-manage-submit-btn" href="#" class="ui-btn ui-corner-all ui-icon-check ui-btn-icon-right">Guardar</a>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div data-role="page" id="full-screen-image" style="background: #000">
+      <div role="main" class="ui-content" id="full-screen-image-content">
+        
+      </div>
+      <!--<div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+      </div>-->
+      </div>
+    </div>
+    
+    <script src="jquery-mobile-1.4.0/jquery-1.10.2.min.js"></script> 
+    <script src="jquery-mobile-1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script> 
+    
+    <script src="js/Label.js"></script>
+    <script src="js/Option.js"></script>
+    <script src="js/DateFormat.js"></script>
+    <script src="js/SingleInputAnswer.js"></script>
+    <script src="js/MultiInputAnswer.js"></script>
+    <script src="js/Question.js"></script>
+    <script src="js/Section.js"></script>
+    <script src="js/Test.js"></script>
+    <script src="js/TestParser.js"></script>
+    <script src="js/StorageManager.js"></script>
+    <script src="js/TestState.js"></script>
+    <script src="js/TestInstance.js"></script>
+    <script src="js/TestController.js"></script>
+    <script src="js/AppController.js"></script> 
+    <script>
+
+    </script>
+  </body>
+</html>

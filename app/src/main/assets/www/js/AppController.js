@@ -739,7 +739,50 @@ var AppController = function() {
 	    }
 		
 	};
-	
+
+
+	$("#test-manage-refresh-repo").click(function(){
+
+	$.ajax({
+
+                              url: 'http://192.168.1.17/psycotest/getrepo.php',
+                              type: 'get',
+                              success: function(data, status) {
+
+                                 lala = JSON.parse(data);
+                                 data = "";
+                                 for( i = 0 ; i < lala.length ; i++ )
+                                 {
+                                 	data += '<input type="checkbox" name="repofile" value="'+lala[i]+'" /> '+lala[i]+"<br/>";
+                                 }
+
+            					 $("#listadorepo").html(data);
+
+                              },
+                              error: function(xhr, desc, err) {
+                                console.debug(xhr);
+                                console.debug("Details: " + desc.d + "\nError:" + err.d );
+                                alert(desc+" -- "+err );
+                              }
+                            }); // end ajax call
+
+
+	});
+
+	//var selected = [];
+	$("#test-manage-download-repo").click(function(){
+
+        $('#listadorepo input:checked').each(function() {
+            //selected.push($(this).attr('name'));
+        	window.appController.loadNewTest( "http://192.168.1.17/psycotest/"+$(this).val() , 'url' );
+        	//alert( );
+
+        });
+
+	});
+
+
+
 	this.loadLocalXMLList = function () {
 		
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSys) {      

@@ -117,9 +117,11 @@
       </div>
       <div role="main" class="ui-content">
         <h4>Seleccione un origen</h4>
-        <div class='ui-grid-a'>
+        <div class='ui-grid-b'>
           <div class='ui-block-a' style="padding-right:4px;"><a style="margin:0" id="test-manage-launch-local" href="#" class="ui-btn ui-corner-all ui-icon-arrow-u ui-btn-icon-left">Local</a></div>
-          <div class='ui-block-b' style="padding-left:4px;"><a style="margin:0" id="test-manage-launch-url" href="#test-manage-add-url" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-right">URL</a></div>
+          <div class='ui-block-a' style="padding-left:4px;"><a style="margin:0" id="test-manage-launch-url" href="#test-manage-add-url" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-right">URL</a></div>
+          <div class='ui-block-a' style="padding-right:4px;"><a style="margin:0" id="test-manage-launch-repo" href="#test-manage-add-repo" class="ui-btn ui-corner-all ui-icon-arrow-u ui-btn-icon-left">Repositorio</a></div>
+
         </div>
         <br />
         <div data-role="collapsible" data-mini="true">
@@ -184,6 +186,32 @@
             <li><a href="#home" data-icon="home">Inicio</a></li>
           </ul>
       </div><!-- /navbar -->
+      </div><!-- /footer -->
+    </div>
+
+    <!-- Pagina pagina para cargar desde el repositorio -->
+    <div data-role="page" id="test-manage-add-repo">
+      <div data-role="header">
+        <h1>Cargar desde repositorio</h1>
+      </div>
+      <div role="main" class="ui-content">
+
+        <a id="test-manage-refresh-repo" href="#" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-bottom">Actualizar lista</a>
+        <div id="listadorepo"> </div>
+        <a id="test-manage-download-repo" href="#" class="ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-bottom">Descargar seleccionados</a>
+
+        <div data-role="collapsible" data-mini="true">
+          <h4>Ayuda</h4>
+          <p>Debe especificar una URL válida en la que se encuentre un fichero de confiuguración XML. Si la sintaxis del fichero no es correcta, el test no se podrá cargar.</p>
+          <p><strong>Es necesario que exista una conexión a internet activa durante la descarga.</strong></p>
+        </div>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" data-icon="home">Inicio</a></li>
+          </ul>
+        </div><!-- /navbar -->
       </div><!-- /footer -->
     </div>
 
